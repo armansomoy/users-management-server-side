@@ -16,9 +16,14 @@ app.get("/", (req, res) => {
   res.send("User management server is running");
 });
 
+
 app.get("/users", (req, res) => {
   res.send(users);
 });
+app.post('/users', (req, res) => {
+    console.log("post appi hitting")
+    console.log(req.body);
+})
 
 app.listen(port, () => {
   console.log(`server is running : ${port}`);
